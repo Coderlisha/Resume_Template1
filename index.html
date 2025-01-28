@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Resume</title>
+  <style>
+    
+    body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  min-height: 100vh;      
+  background-color: #f4f4f4; 
+  }
+
+  .container {
+  width: 80%;           
+  max-width: 800px;      
+  background: #fff;      
+  padding: 20px;        
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;    
+}
+
+    .resume {
+      max-width: 800px;
+      margin: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 30px;
+      display: flex;
+    }
+    .left-column {
+      width: 35%;
+      padding-right: 20px;
+      border-right: 2px solid #ddd;
+    }
+    .right-column {
+      width: 65%;
+      padding-left: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+   
+    header p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .section h2 {
+      font-size: 1.2rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .section p, .section ul li {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .section h2 {
+    font-size: 1.2rem;
+    color: #007bff; 
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #007bff; 
+    }
+    ul {
+      margin: 0; 
+      padding-left: 10px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+  <div class="resume">
+    <!-- Left Column -->
+    <div class="left-column">
+      <header>
+        <h1 id="name">Tanya Sharma</h1>
+        <p id="contact">Flat No. 302, Sunrise Apartments, Sector 15, Gurgaon, Haryana 122001, India <br>+91 9876543210<br> tanya.sharma@example.com</p>
+        <p id="website">www.interestingsite.com <br>github.com/yourusername</p>
+      </header>
+
+      <div class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Communication</li>
+          <li>Problem-solving</li>
+          <li>Critical thinking</li>
+          <li>Time management</li>
+          <li>Lesson planning</li>
+          <li>Leadership</li>
+          <li>Creative writing</li>
+        </ul>
+      </div>
+
+      <div class="section" id="education">
+        <h2>Education</h2>
+        <p><strong>Bachelor’s Degree in Elementary Education</strong> <br>
+           Bellows College, Santa Fe, NM<br>
+           Aug 2011 – May 2015</p>
+
+        <p><strong>High School Diploma</strong> <br>
+           Santa Fe High School, Santa Fe, NM<br>
+           Graduated: May 2011</p>
+      </div>
+
+      <div class="section" id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Awarded "Teacher of the Year" at Balsam Elementary School (2021).</li>
+          <li>Implemented a literacy program, improving reading scores by 20%.</li>
+          <li>Organized an annual science fair with 200+ participants.</li>
+          <li>Recognized for excellence during college teaching assignments.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+   
+    <div class="right-column">
+      <div class="section" id="objective">
+        <h2>Objective</h2>
+        <p style="text-align: justify;">To apply my software development expertise and problem-solving skills to create innovative solutions that enhance user
+        experiences and drive business growth in a dynamic organization.</p>
+      </div>
+
+      <div class="section" id="experience">
+        <h2>Experience</h2>
+    <p><strong>Software Engineer</strong>: Tech Innovators Inc. • San Francisco, CA<br>
+        Jan 2020 – Present</p>
+      <ul>
+        <li>Designed and developed scalable web applications using React.js, Node.js, and MongoDB, improving system
+          performance by 30%.</li>
+        <li>Collaborated with cross-functional teams to deliver high-quality software solutions within tight deadlines.</li>
+       
+      </ul>
+      
+      <p><strong>Software Engineer Intern</strong>: CodeWorks Solutions • Austin, TX<br>
+        Jun 2018 – Dec 2019</p>
+      <ul>
+        <li>Built RESTful APIs with Express.js and integrated them into web applications, improving data retrieval efficiency.
+        </li>
+        <li>Conducted debugging and optimization for existing applications, reducing load times by 25%.</li>
+       
+
+      </ul>
+
+      </div>
+      
+    <div class="section" id="languages">
+      <h2>Languages and Technologies</h2>
+      <p><strong>Programming Languages:</strong> JavaScript (Advanced), Python (Advanced), C++ (Intermediate), SQL
+        (Intermediate), Java (Basic)</p>
+      <p><strong>Technologies and Tools:</strong> React.js, Node.js, Express.js, MongoDB, MySQL, Git, Docker, REST APIs</p>
+    </div>
+    
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <p><strong>Peer Mentoring Program</strong></p>
+      <ul>
+        <li>Developed a web-based application to pair mentors with new students using a matching algorithm.</li>
+        <li>Built the backend with Node.js and MongoDB for managing user data and matching logic.</li>
+      </ul>
+    
+      <p><strong>Newsletter Automation</strong></p>
+      <ul>
+        <li>Designed and implemented a system to automate newsletter creation using React.js for the frontend.</li>
+        <li>Used Python for backend automation and integrated email API for newsletter distribution.</li>
+      </ul>
+    
+      <p><strong>EdTech Curriculum Implementation</strong></p>
+      <ul>
+        <li>Created an interactive dashboard for teachers to manage and track student progress.</li>
+        <li>Utilized JavaScript, Express.js, and MySQL for data storage and seamless functionality.</li>
+      </ul>
+    </div>
+
+     
+    </div>
+    
+  </div>
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
